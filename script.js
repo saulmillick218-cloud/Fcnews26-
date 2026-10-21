@@ -30,7 +30,7 @@ async function loadNews() {
   const grid = document.getElementById("news-grid");
   grid.innerHTML = '<div class="empty-state">Loading latest transfer headlines…</div>';
   try {
-    const response = await fetch("/api/transfers", { headers: { "Accept": "application/json" }});
+    const response = await fetch("/.netlify/functions/transfers") { headers: { "Accept": "application/json" }});
     if (!response.ok) throw new Error("Feed unavailable");
     const payload = await response.json();
     const live = Array.isArray(payload.articles) ? payload.articles : [];
