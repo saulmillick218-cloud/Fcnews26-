@@ -47,9 +47,12 @@ async function loadNews() {
     const all = [...customNews, ...mapped];
     document.getElementById("feed-status").textContent = mapped.length ? `LIVE FEED · ${mapped.length} REPORTS` : "FEED UNAVAILABLE · DEMO";
     renderNews(all);
-  } catch (error) {
-    document.getElementById("feed-status").textContent = "LIVE FEED UNAVAILABLE";
-    renderNews(customNews);
+   } catch (error) {
+  console.error("FCNEWS26 feed error:", error);
+  document.getElementById("feed-status").textContent =
+    "LIVE FEED ERROR: " + error.message;
+  renderNews(customNews);
+}
   }
 }
 document.querySelectorAll(".filter").forEach(button => button.addEventListener("click", () => {
