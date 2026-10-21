@@ -51,7 +51,9 @@ clearTimeout(timeout); {headers: { "Accept": "application/json" }});
       date: article.date || "LATEST"
     }));
     const all = [...customNews, ...mapped];
-    document.getElementById("feed-status").textContent = mapped.length ? `LIVE FEED · ${mapped.length} REPORTS` : "FEED UNAVAILABLE · DEMO";
+    mapped.length
+    ? `LIVE FEED • ${mapped.length} ARTICLES`
+    : "NO LIVE ARTICLES"
     renderNews(all);
    } catch (error) {
   console.error("FCNEWS26 feed error:", error);
