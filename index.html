@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="FCNEWS26 — football transfer rumours, official signings and breaking transfer updates.">
+  <title>FCNEWS26 | Transfer News</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="FCNEWS26 home"><span class="brand-mark">FC</span><span>NEWS<span class="red">26</span></span></a>
+    <span class="live-pill"><i></i> TRANSFER DESK</span>
+  </header>
+
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">THE FOOTBALL TRANSFER HUB</p>
+      <h1>Every move.<br><span>Every update.</span></h1>
+      <p class="hero-text">Rumours, confirmed deals and the latest transfer headlines — all in one place.</p>
+      <a class="hero-button" href="#latest">Explore latest news <span>→</span></a>
+    </div>
+    <div class="hero-ball" aria-hidden="true">⚽</div>
+    <div class="hero-label">FCNEWS26 <b>•</b> TRANSFER CENTRAL</div>
+  </section>
+
+  <main>
+    <nav class="filters" aria-label="Filter news">
+      <button class="filter active" data-filter="All">All News</button>
+      <button class="filter" data-filter="Official">Official</button>
+      <button class="filter" data-filter="Rumour">Rumours</button>
+      <button class="filter" data-filter="Breaking">Breaking</button>
+    </nav>
+
+    <section id="latest" class="section-heading">
+      <div><p class="eyebrow">STAY IN THE KNOW</p><h2>Latest transfer news</h2></div>
+      <span id="feed-status" class="small-label">CONNECTING LIVE FEED…</span>
+    </section>
+
+    <div id="news-grid" class="news-grid" aria-live="polite"></div>
+
+    <section class="submit-panel">
+      <div>
+        <p class="eyebrow">YOUR TRANSFER DESK</p>
+        <h2>Publish a news update</h2>
+        <p>Write your own report and add it to this browser's news list. This starter version saves posts on this device only.</p>
+      </div>
+      <form id="news-form">
+        <label>Headline<input id="headline" required maxlength="120" placeholder="e.g. Club announces new signing"></label>
+        <div class="form-row">
+          <label>Status<select id="status"><option>Breaking</option><option>Official</option><option>Rumour</option></select></label>
+          <label>League / club<input id="club" maxlength="60" placeholder="e.g. Premier League"></label>
+        </div>
+        <label>News details<textarea id="details" required maxlength="500" rows="3" placeholder="Write what has been reported and by whom..."></textarea></label>
+        <label>Source name or link<input id="source" maxlength="160" placeholder="Source (required for reliable reporting)"></label>
+        <button class="primary-button" type="submit">Publish update</button>
+        <p id="form-message" class="form-message" role="status"></p>
+      </form>
+    </section>
+
+    <section class="editor-note">
+      <strong>Editorial rule</strong>
+      <p>Only label a transfer “Official” after the club or player confirms it. Clearly mark unverified claims as rumours and credit the original source. Demo stories below are examples, not current transfer reports.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#"><span class="brand-mark">FC</span><span>NEWS<span class="red">26</span></span></a>
+    <p>Independent football transfer news concept.</p>
+    <p class="copyright">© <span id="year"></span> FCNEWS26</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
