@@ -44,7 +44,7 @@ async function loadNews() {
       sourceUrl: article.url || "",
       date: article.date || "LATEST"
     }));
-    const all = [...customNews, ...(mapped.length ? mapped : DEMO_NEWS)];
+    const all = [...customNews, ...mapped];
     document.getElementById("feed-status").textContent = mapped.length ? `LIVE FEED · ${mapped.length} REPORTS` : "FEED UNAVAILABLE · DEMO";
     renderNews(all);
   } catch (error) {
