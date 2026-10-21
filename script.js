@@ -49,7 +49,7 @@ async function loadNews() {
     renderNews(all);
   } catch (error) {
     document.getElementById("feed-status").textContent = "LIVE FEED UNAVAILABLE";
-    renderNews([...customNews, ...DEMO_NEWS]);
+    renderNews(customNews);
   }
 }
 document.querySelectorAll(".filter").forEach(button => button.addEventListener("click", () => {
