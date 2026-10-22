@@ -36,7 +36,7 @@ const timeout = setTimeout(() => controller.abort(), 15000);
 const response = await fetch("/.netlify/functions/transfers", {
   signal: controller.signal
 });
-clearTimeout(timeout); {headers: { "Accept": "application/json" }});
+clearTimeout(timeout);
     if (!response.ok) throw new Error("Feed unavailable");
     const payload = await response.json();
     const live = Array.isArray(payload.articles) ? payload.articles : [];
